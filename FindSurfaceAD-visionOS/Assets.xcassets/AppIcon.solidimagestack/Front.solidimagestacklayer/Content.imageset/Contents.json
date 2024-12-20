@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "front-ad.png",
       "idiom" : "vision",
       "scale" : "2x"
     }

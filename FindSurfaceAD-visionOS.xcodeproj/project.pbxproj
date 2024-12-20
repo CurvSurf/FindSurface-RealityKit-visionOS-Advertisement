@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F386CBD32CC78BD000EC89A3 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = F386CBD22CC78BD000EC89A3 /* RealityKitContent */; };
+		F386CBEF2CC7917600EC89A3 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = F386CBEE2CC7917600EC89A3 /* Algorithms */; };
+		F386CBF22CC7918F00EC89A3 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = F386CBF12CC7918F00EC89A3 /* MarkdownUI */; };
+		F3DE67952D1440530025F379 /* FindSurface-visionOS in Frameworks */ = {isa = PBXBuildFile; productRef = F3DE67942D1440530025F379 /* FindSurface-visionOS */; };
+		F3DE68322D14409A0025F379 /* USERGUIDE.md in Resources */ = {isa = PBXBuildFile; fileRef = F3DE68312D1440950025F379 /* USERGUIDE.md */; };
+		F3DE68452D1459350025F379 /* images in Resources */ = {isa = PBXBuildFile; fileRef = F3DE68442D1459350025F379 /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F386CBCD2CC78BD000EC89A3 /* FindSurfaceAD-visionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FindSurfaceAD-visionOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F386CBD12CC78BD000EC89A3 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		F3DE68312D1440950025F379 /* USERGUIDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = USERGUIDE.md; sourceTree = "<group>"; };
+		F3DE68442D1459350025F379 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -41,7 +46,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F386CBD32CC78BD000EC89A3 /* RealityKitContent in Frameworks */,
+				F386CBEF2CC7917600EC89A3 /* Algorithms in Frameworks */,
+				F3DE67952D1440530025F379 /* FindSurface-visionOS in Frameworks */,
+				F386CBF22CC7918F00EC89A3 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +58,10 @@
 		F386CBC42CC78BD000EC89A3 = {
 			isa = PBXGroup;
 			children = (
+				F3DE68442D1459350025F379 /* images */,
+				F3DE68312D1440950025F379 /* USERGUIDE.md */,
 				F386CBCF2CC78BD000EC89A3 /* FindSurfaceAD-visionOS */,
-				F386CBD02CC78BD000EC89A3 /* Packages */,
+				F3E372C32D143F7A00F2F227 /* Frameworks */,
 				F386CBCE2CC78BD000EC89A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,12 +74,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F386CBD02CC78BD000EC89A3 /* Packages */ = {
+		F3E372C32D143F7A00F2F227 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F386CBD12CC78BD000EC89A3 /* RealityKitContent */,
 			);
-			path = Packages;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +101,9 @@
 			);
 			name = "FindSurfaceAD-visionOS";
 			packageProductDependencies = (
-				F386CBD22CC78BD000EC89A3 /* RealityKitContent */,
+				F386CBEE2CC7917600EC89A3 /* Algorithms */,
+				F386CBF12CC7918F00EC89A3 /* MarkdownUI */,
+				F3DE67942D1440530025F379 /* FindSurface-visionOS */,
 			);
 			productName = "FindSurfaceAD-visionOS";
 			productReference = F386CBCD2CC78BD000EC89A3 /* FindSurfaceAD-visionOS.app */;
@@ -123,6 +133,11 @@
 			);
 			mainGroup = F386CBC42CC78BD000EC89A3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F386CBED2CC7917600EC89A3 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				F386CBF02CC7918F00EC89A3 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				F3DE67932D1440530025F379 /* XCRemoteSwiftPackageReference "FindSurface-visionOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F386CBCE2CC78BD000EC89A3 /* Products */;
 			projectDirPath = "";
@@ -138,6 +153,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3DE68452D1459350025F379 /* images in Resources */,
+				F3DE68322D14409A0025F379 /* USERGUIDE.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,10 +179,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FindSurfaceAD-visionOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 2YNVZ7G6L3;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FindSurfaceAD-visionOS";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -188,10 +207,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FindSurfaceAD-visionOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 2YNVZ7G6L3;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FindSurfaceAD-visionOS";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,10 +369,48 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		F386CBED2CC7917600EC89A3 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		F386CBF02CC7918F00EC89A3 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+		F3DE67932D1440530025F379 /* XCRemoteSwiftPackageReference "FindSurface-visionOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CurvSurf/FindSurface-visionOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		F386CBD22CC78BD000EC89A3 /* RealityKitContent */ = {
+		F386CBEE2CC7917600EC89A3 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
+			package = F386CBED2CC7917600EC89A3 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		F386CBF12CC7918F00EC89A3 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F386CBF02CC7918F00EC89A3 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+		F3DE67942D1440530025F379 /* FindSurface-visionOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3DE67932D1440530025F379 /* XCRemoteSwiftPackageReference "FindSurface-visionOS" */;
+			productName = "FindSurface-visionOS";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
