@@ -78,6 +78,8 @@ final class AppModel {
     var currentResource: MaterialResource? = nil
     var materialResources: [MaterialResource] = []
     
+    private(set) var latestRMSerror: Float = 0
+    
     init() {
         
         let sceneReconstruction = SceneReconstructionProvider()
@@ -335,6 +337,7 @@ final class AppModel {
             timer.record(found: false)
         } else {
             timer.record(found: true)
+            latestRMSerror = result.rmsError
             setLatestResult(result, location)
         }
         

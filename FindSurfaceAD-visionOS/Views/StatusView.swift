@@ -15,11 +15,17 @@ struct StatusView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            let fps = String(format: "%d fps", Int(timer.foundFps.rounded()))
-            Label(fps, systemImage: "f.square.fill")
-                .imageScale(.large)
-                .font(.body.bold().monospaced())
-            
+            HStack {
+                let fps = String(format: "%d fps", Int(timer.foundFps.rounded()))
+                Label(fps, systemImage: "f.square.fill")
+                    .imageScale(.large)
+                    .font(.body.bold().monospaced())
+                
+                let rmsError = String(format: "%.2f cm", state.latestRMSerror * 100)
+                Label(rmsError, systemImage: "space")
+                    .imageScale(.medium)
+                    .font(.body.bold().monospaced())
+            }
             let points = "\(state.meshVertexManager.vertexCount) pts."
             Label(points, systemImage: "p.square.fill")
                 .imageScale(.large)
